@@ -1,0 +1,159 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #06090f; /* Sfondo scuro */
+  color: white;
+}
+
+/* Header */
+header {
+  background-color: #344973; /* Header blu scuro */
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header img {
+  width: 60px;
+  height: auto;
+}
+
+/* Menu di Navigazione */
+header nav {
+  margin-top: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #9ec4e9;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #a4e995;
+}
+
+/* Intro Section */
+.intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #172138;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.intro img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.intro h1 {
+  font-size: 36px;
+  color: #e5f4fe; /* Titolo azzurro chiaro */
+  margin-bottom: 10px;
+}
+
+.intro p {
+  font-size: 16px;
+  color: #cbe9fd; /* Testo azzurro tenue */
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.projects h2 {
+  font-size: 24px;
+  color: #9ec4e9;
+}
+
+/* Contenitore per tutte le card */
+.project-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+/* Singola card */
+.project-card {
+  width: calc(33.33% - 20px);
+  max-width: 500px;
+  background-color: #172138; /* Sfondo card blu */
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.project-card:hover {
+  box-shadow: 0 0 12px rgb(164, 233, 149);
+}
+
+/* Footer */
+footer {
+  background-color: #344973;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  border-top: 1px solid #172138;
+}
+
+footer a {
+  color: #9ec4e9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #a4e995;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .intro img {
+    width: 150px;
+  }
+  
+  .project-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .project-card {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
