@@ -1,18 +1,25 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
+<html lang="it"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Alex</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <a href="index.html" class="logo">
-      <img src="img/72.png" alt="Logo">
-    </a>
+
+    <div class="logo">
+      <a href="index.html">
+        <img src="img/72.png" alt="Logo AB">
+      </a>
+    </div>
+
+    <!-- Checkbox per il menu a tendina -->
+    <input type="checkbox" id="menu-toggle">
+     <label for="menu-toggle" class="menu-icon">☰</label>  <!--  ☰  https://emojipedia.org/it/trigram-for-heaven  -->
+    
     <nav>
-      <ul>
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="project1.html">Project 1</a></li>
         <li><a href="project2.html">Project 2</a></li>
@@ -20,11 +27,13 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
   </header>
-  <main>
-    <section class="intro">
-      <img src="img/profile.jpg" alt="Foto Profilo">
-      <div class="intro-text">
+  
+  <!-- Bio -->
+  <section class="intro">
+    <img src="img/profile.jpg" alt="Foto Profilo">
+    <div class="intro-text">
       <h1>Salve a tutti</h1>
       <p>
         Sono Alex, un giovane appassionato di videogiochi nato e cresciuto nella
@@ -38,30 +47,32 @@
         nel campo delle discipline associate all’implementazione di nuove tecnologie
         dell’arte, con particolare attenzione allo sviluppo di software e di design.
       </p>
-    </section>
+    </div>
+  </section>
 
-    <section class="projects">
-      <h2>Projects</h2>
-      <div class="project-cards">
-        <div class="project-card">
-          <a href="project1.html">
-            <img src="img/project1.jpg" alt="Progetto 1">
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="project2.html">
-            <img src="img/project2.jpg" alt="Progetto 2">
-          </a>
-        </div>
-        <div class="project-card">
-          <a href="project3.html">
-            <img src="img/project3.jpg" alt="Progetto 3">
-          </a>
-        </div>
+  <!-- Progetti -->
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="project-cards">
+      <div class="project-card">
+        <a href="project1.html">
+          <img src="img/project1.jpg" alt="Progetto 1">
+        </a>
       </div>
-    </section>
-  </main>
+      <div class="project-card">
+        <a href="project2.html">
+          <img src="img/project2.jpg" alt="Progetto 2">
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="project3.html">
+          <img src="img/project3.jpg" alt="Progetto 3">
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
   <footer>
     <p>Copyright 2023–24™</p>
     <a href="contact.html">Contact me</a>

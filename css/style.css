@@ -3,43 +3,60 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #06090f; 
-  color: white;
+  color: #e5f4fe;
 }
 
 /* Header */
 header {
-  background-color: #344973; 
+  background-color: #799eca;
   padding: 10px 20px;
   text-align: center;
+  position: relative;
+  border-bottom: 2px solid #344973;
 }
 
-header img {
+.logo a img {
+  display: block;
+  margin: 0 auto;
   width: 60px;
   height: auto;
 }
 
-/* Menu di Navigazione */
-header nav {
-  margin-top: 10px;
+/* Checkbox nascosto per il menu a tendina */
+#menu-toggle {
+  display: none;
 }
 
-header nav ul {
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: #e5f4fe;
+  cursor: pointer;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* Navigazione */
+nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   gap: 20px;
 }
 
-header nav ul li a {
+/* Navigazione - Testo più visibile */
+nav ul li a {
   text-decoration: none;
-  color: #9ec4e9;
+  color: #e5f4fe; /* Colore del testo */
+  font-weight: regular; /* Aggiunto bold */
+  padding: 5px 8px;
   transition: color 0.3s ease;
 }
 
-header nav ul li a:hover {
-  color: #a4e995;
+nav ul li a:hover {
+  color: #a4e995; /* Colore hover */
 }
 
 /* Intro Section */
@@ -82,7 +99,7 @@ header nav ul li a:hover {
 }
 
 .projects h2 {
-  font-size: 24px;
+  font-size: 30px;
   color: #9ec4e9;
 }
 
@@ -95,7 +112,7 @@ header nav ul li a:hover {
   margin: 20px;
 }
 
-/* Card singola*/
+/* Card singola */
 .project-card {
   width: calc(33.33% - 20px);
   max-width: 500px;
@@ -108,6 +125,7 @@ header nav ul li a:hover {
 
 .project-card img {
   width: 100%;
+  border-radius: 8px;
 }
 
 .project-card:hover {
@@ -121,7 +139,7 @@ footer {
   text-align: center;
   padding: 10px;
   position: relative;
-  border-top: 1px solid #172138;
+  border-top: 2px solid #172138;
 }
 
 footer a {
@@ -135,8 +153,199 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+
+
+/* -------Stile per la pagina del progetto------- */
+.project-detail {
+  padding: 20px;
+  background-color: #172138; /* Colore delle cards */
+  border-radius: 8px;
+  margin: 20px;
+}
+
+.project-detail h1 {
+  color: #e5f4fe; /* Colore del titolo */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Pagina del progetto - Layout modificato */
+.project-content {
+  display: flex;
+  flex-direction: column; /* Impila gli elementi verticalmente */
+  gap: 20px;
+  align-items: center;
+}
+
+.project-content img {
+  width: 80%; /* Immagine a tutta larghezza */
+  border-radius: 8px;
+  margin-bottom: 50px;
+  margin-top: 120px;
+}
+
+.project-description {
+  width: 100%;
+}
+
+.project-description h2 {
+  color: #e5f4fe; /* Colore dei sottotitoli */
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.project-description p {
+  color: #e5f4fe; /* Colore del testo */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.project-description ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #e5f4fe; /* Colore del testo */
+}
+
+.project-description ul li {
+  margin-bottom: 10px;
+}
+
+/* ==================== CONTACT PAGE ==================== */
+.contact-box {
+  background-color: #172138;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.contact-box h2 {
+  color: #e5f4fe;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-box input,
+.contact-box textarea {
+  padding: 0.8rem;
+  border: 2px solid #344973;
+  border-radius: 6px;
+  background-color: #06090f;
+  color: #e5f4fe;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  border-color: #799eca;
+  outline: none;
+}
+
+.contact-box button {
+  background-color: #799eca;
+  color: #e5f4fe;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-box button:hover {
+  background-color: #a4e995;
+  transform: translateY(-2px);
+}
+
+/* Social Links */
+.social-links {
+  background-color: #172138;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem;
+}
+
+.social-links h2 {
+  color: #e5f4fe;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.social-item {
+  background-color: #344973;
+  padding: 1.2rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.social-item:hover {
+  transform: translateY(-5px);
+}
+
+.social-item img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(0.9);
+}
+
+.social-item span {
+  color: #e5f4fe;
+  font-weight: 500;
+}
+
+
+/* Responsive per iPhone SE */
+@media (max-width: 375px) {
+  .menu-icon {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #799eca;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+
+  /* Mostra il menu quando il checkbox è attivo */
+  #menu-toggle:checked + .menu-icon + nav ul {
+    display: flex;
+  }
+
+  /* Logo e menu icon allineati */
+  .logo {
+    margin-bottom: 10px;
+  }
+
   .intro {
     flex-direction: column;
     text-align: center;
@@ -154,5 +363,62 @@ footer a:hover {
   .project-card {
     width: 80%;
     margin: 0 auto;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    padding: 0.5rem;
+  }
+
+  /* Contact Box */
+  .contact-box {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .contact-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-box input,
+  .contact-box textarea {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .contact-box button {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  /* Social Links */
+  .social-links {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .social-links h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-grid {
+    gap: 1rem;
+  }
+
+  .social-item {
+    padding: 0.8rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-item img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .social-item span {
+    font-size: 0.9rem;
   }
 }
