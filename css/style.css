@@ -317,7 +317,7 @@ footer a:hover {
 
 
 /* Responsive per iPhone SE */
-@media (max-width: 375px) {
+@media (max-width: 320px) {
   .menu-icon {
     display: block;
   }
