@@ -1,7 +1,3 @@
-/* ============================= */
-/*      MOBILE-FIRST (<=375)     */
-/* ============================= */
-
 /* Global Styles */
 body {
   margin: 0;
@@ -123,12 +119,12 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column; 
   gap: 20px;
-  margin: 20px;
+  margin-right: 10px;
   align-items: center;
 }
 
 .project-card {
-  width: 100%;
+  width: 80%;
   max-width: 500px;
   background-color: #172138;
   border-radius: 8px;
@@ -333,7 +329,7 @@ footer a:hover {
 
 
 @media (min-width: 525px) {
-  /* Icona hamburger nascosta su desktop */
+  /* Icona hamburger sparisce su desktop */
   .menu-icon {
     display: none;
   }
